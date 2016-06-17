@@ -14,4 +14,6 @@ Competible ```Multiporcessing``` functions:
 * Process
 ```
 ![Alt Tex](https://github.com/ekremguldeste/prog-bar/blob/master/progressbar.png)
+
+
 This piece of algorithm pomps up a proggress bar on to your terminal for multiprocessing (can be used with pool.map, pool.imap, pool.map_async, and process) which contains id of your processes, estimated execution time, launch time, percentage of the work done etc.)
