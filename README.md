@@ -11,3 +11,4 @@ Competible ```Multiporcessing``` functions:
 * Pool.map_async()
 * Process
 ```
+![Alt Tex](https://github.com/ekremguldeste/prog-bar/blob/master/progressbar.png)
