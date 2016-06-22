@@ -40,7 +40,7 @@ from progbar import *
 ![Alt Tex](https://github.com/ekremguldeste/prog-bar/blob/master/versions.png)
 
 * Lastly you should embed ``` progress_bar(pool_count), progress_estimator(i,current_xcoordinate,Nrun1),  percentage(current_pid, i, current_xcoordinate, Nrun1,launch_time,c_launch_time) ``` correctly to your MC sampler function :
-For example let our MC sampler function be ``` run(Nrun1) ```, Then
+For example let our MC sampler function be ``` run(Nrun1) ```, Then we have,
 
 ```python
 def run(Nrun1):
@@ -68,8 +68,11 @@ def run(Nrun1):
 		percentage(current_pid, i, current_xcoordinate, Nrun1,launch_time,c_launch_time)
 		
 		#do some complicated work
-		time.sleep(0.004)*
+		time.sleep(0.004)
 ```
+
+* For a complete **example** here is the [link](https://github.com/ekremguldeste/prog-bar/blob/master/example.py)
+
 # Acknowlegement
 Finally, I would like to thank [Burak Kakillioğlu](https://github.com/bkakilli) for enforcing me to upload this module on GitHub
 
