@@ -64,17 +64,18 @@ def run(Nrun1):
 		current_pid=os.getpid()
 		#puts '>' when some Nrun1/25 of the job completed
 		progress_estimator(i,current_xcoordinate,Nrun1)
-		#pops up the percentige, launch date of the code (including year month and day), estimated execution period of the code (your computer will do the job in 'X.XXX'ours)
+		#pops up the percentage, launch date of the code (including year month and day),
+		#estimated execution period of the code (your computer will do the job in 'X.XXX'ours)
 		percentage(current_pid, i, current_xcoordinate, Nrun1,launch_time,c_launch_time)
 		
 		#do some complicated work
 		time.sleep(0.004)
 ```
 
-* For a complete **example** here is the [link](https://github.com/ekremguldeste/prog-bar/blob/master/example.py)
+* For a complete **example** here is the [link](https://github.com/ekremguldeste/prog-bar/blob/master/example.py).
 
 # Acknowlegement
-Finally, I would like to thank [Burak Kakillioğlu](https://github.com/bkakilli) for enforcing me to upload this module on GitHub
+Finally, I would like to thank [Burak Kakillioğlu](https://github.com/bkakilli) for enforcing me to upload this module on GitHub.
 
 
-<sup>This work is dedicated to HÖ</sup>
+<sup>This work is dedicated to HÖ.</sup>
