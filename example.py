@@ -38,7 +38,8 @@ def run(Nrun1):
 		current_pid=os.getpid()
 		#puts '>' when some Nrun1/25 of the job completed
 		progress_estimator(i,current_xcoordinate,Nrun1)
-		#pops up the percentige, launch date of the code (including year month and day), estimated execution period of the code (your computer will do the job in 'X.XXX'ours)
+		#pops up the percentage, launch date of the code (including year month and day),
+		#estimated execution period of the code (your computer will do the job in 'X.XXX'ours)
 		percentage(current_pid, i, current_xcoordinate, Nrun1,launch_time,c_launch_time)
 		
 		#do some complicated work
