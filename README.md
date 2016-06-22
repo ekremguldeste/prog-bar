@@ -35,11 +35,41 @@ import inspect, os
 from progbar import *
 ```
 
-* Then call  ``` stamp_versions() ```  for letting you know the versions of Scipy, Numpy, GCC, current file name and directory :
+* Call  ``` stamp_versions() ```  for letting you know the versions of Scipy, Numpy, GCC, current file name and directory :
  
 ![Alt Tex](https://github.com/ekremguldeste/prog-bar/blob/master/versions.png)
 
+* Lastly you should embed ``` progress_bar(pool_count), progress_estimator(i,current_xcoordinate,Nrun1),  percentage(current_pid, i, current_xcoordinate, Nrun1,launch_time,c_launch_time) ``` correctly to your MC sampler function :
+For example let our MC sampler function be ``` run(Nrun1) ```, Then
 
+```python
+def run(Nrun1):
+	
+	global launch_time,c_launch_time
+	progress_bar(pool_count)
+	#import the times when the code first launched
+	launch_time=time.time()
+	c_launch_time=time.ctime()
+	
+	#multiprocessing in queue (to use other module comment the line below)
+	q.put([Nrun1])
+	
+	for i in range (Nrun1):
+	
+		#your current process:
+		current = multiprocessing.current_process()
+		#current coordinate of your cursor
+		current_xcoordinate=current._identity[0]
+		#current process id
+		current_pid=os.getpid()
+		#puts '>' when some Nrun1/25 of the job completed
+		progress_estimator(i,current_xcoordinate,Nrun1)
+		#pops up the percentige, launch date of the code (including year month and day), estimated execution period of the code (your computer will do the job in 'X.XXX'ours)
+		percentage(current_pid, i, current_xcoordinate, Nrun1,launch_time,c_launch_time)
+		
+		#do some complicated work
+		time.sleep(0.004)*
+```
 # Acknowlegement
 Finally, I would like to thank [Burak Kakillioğlu](https://github.com/bkakilli) for enforcing me to upload this module on GitHub
 
