@@ -12,7 +12,6 @@ from progbar import *
 pool_count=12
 #params
 Nrun1=2000 # total run count
-x_starter_line=10 # this is the y coordinate where your progresbar shows up
 stamp_versions() # stamps the versions of Scipy, Numpy, GCC, current file name and directory
 
 
@@ -21,7 +20,7 @@ stamp_versions() # stamps the versions of Scipy, Numpy, GCC, current file name a
 def run(Nrun1):
 	
 	global launch_time,c_launch_time
-	progress_bar(pool_count,x_starter_line)
+	progress_bar(pool_count)
 	#import the times when the code first launched
 	launch_time=time.time()
 	c_launch_time=time.ctime()
@@ -38,9 +37,9 @@ def run(Nrun1):
 		#current process id
 		current_pid=os.getpid()
 		#puts '>' when some Nrun1/25 of the job completed
-		progress_estimator(i,current_xcoordinate,Nrun1,x_starter_line)
+		progress_estimator(i,current_xcoordinate,Nrun1)
 		#pops up the percentige, launch date of the code (including year month and day), estimated execution period of the code (your computer will do the job in 'X.XXX'ours)
-		percentage(current_pid, i, current_xcoordinate, Nrun1,x_starter_line,launch_time,c_launch_time)
+		percentage(current_pid, i, current_xcoordinate, Nrun1,launch_time,c_launch_time)
 		
 		#do some complicated work
 		time.sleep(0.004)
