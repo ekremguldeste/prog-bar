@@ -25,4 +25,4 @@ Here is the recipe for using it in a proper way!
 
 # Acknowlegement
 Finally, I would like to thank [Burak Kakillioğlu](https://github.com/bkakilli) for enforcing me to upload this module on GitHub
-<sup>This work is dedicated to HÖ</sup>
+                                                                                            <sup>This work is dedicated to HÖ</sup>
