@@ -22,25 +22,26 @@ Here is the recipe for using it in a proper way!
 # Recipe
 What you need to do is:
 
-1. Download ```progbar.py ``` and be sure that this file downloaded to the same directory with your ```__main__ ``` code.
-2. Import ```time, os, inspect ``` into your main code to let ```progbar``` module stamps the versions of Scipy, Numpy, GCC, current file name and directory and let module estimates the execution time of the code, i.e. 
-
-
+* Download ```progbar.py ``` and be sure that this file downloaded to the same directory with your ```__main__ ``` code.
+* Import ```time, os, inspect ``` into your main code to let ```progbar``` module stamps the versions of Scipy, Numpy, GCC, current file name and directory and let module estimates the execution time of the code, i.e. 
 ```python
 import time
 import sys
 import inspect, os 
 ``` 
-3. Then, import ```progbar.py ``` into your main code. 
+* Then, import ```progbar.py ``` into your main code. 
 
 ```python
 from progbar import *
 ```
 
-4. Then call  ``` stamp_versions() ```  for letting you know the versions of Scipy, Numpy, GCC, current file name and directory :
+* Then call  ``` stamp_versions() ```  for letting you know the versions of Scipy, Numpy, GCC, current file name and directory :
  
 ![Alt Tex](https://github.com/ekremguldeste/prog-bar/blob/master/versions.png)
 
+
 # Acknowlegement
 Finally, I would like to thank [Burak Kakillioğlu](https://github.com/bkakilli) for enforcing me to upload this module on GitHub
-                                                                                            <sup>This work is dedicated to HÖ</sup>
+
+
+<sup>This work is dedicated to HÖ</sup>
