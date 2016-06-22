@@ -29,7 +29,7 @@ def print_there(x, y, text):
 
 
 
-def progress_bar(pool_count,x_starter_line):
+def progress_bar(pool_count):
 	sys.stdout.write('\33[1m') #bold mode on
 	print_there(x_starter_line,0,'Thread #| PID:|______PROGRESS____|  __%|___ ~ EXECUTION PERIOD (hours)|LAUNCHED AT')
 	sys.stdout.write('\33[0m') #bold mode off
