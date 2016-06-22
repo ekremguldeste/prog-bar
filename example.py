@@ -3,16 +3,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 import sys
-import math as m
 import inspect, os
-import multiprocessing
-pool_count=12
-from progbar import *
 
+
+
+#import progressbar
+from progbar import *
+pool_count=12
 #params
 Nrun1=2000 # total run count
 x_starter_line=10 # this is the y coordinate where your progresbar shows up
-stamp_versions()
+stamp_versions() # stamps the versions of Scipy, Numpy, GCC, current file name and directory
 
 
 
@@ -20,38 +21,34 @@ stamp_versions()
 def run(Nrun1):
 	
 	global launch_time,c_launch_time
-	progress_bar(12,x_starter_line)
+	progress_bar(pool_count,x_starter_line)
+	#import the times when the code first launched
 	launch_time=time.time()
 	c_launch_time=time.ctime()
 	
-	#multiprocessing in queue
+	#multiprocessing in queue (to use other module comment the line below)
 	q.put([Nrun1])
 	
 	for i in range (Nrun1):
 	
-
+		#your current process:
 		current = multiprocessing.current_process()
+		#current coordinate of your cursor
 		current_xcoordinate=current._identity[0]
+		#current process id
 		current_pid=os.getpid()
+		#puts '>' when some Nrun1/25 of the job completed
 		progress_estimator(i,current_xcoordinate,Nrun1,x_starter_line)
+		#pops up the percentige, launch date of the code (including year month and day), estimated execution period of the code (your computer will do the job in 'X.XXX'ours)
 		percentage(current_pid, i, current_xcoordinate, Nrun1,x_starter_line,launch_time,c_launch_time)
 		
 		#do some complicated work
 		time.sleep(0.004)
 
-
+#stuff for multi processing
 
 from multiprocessing import Pool,Process,Queue
-#pool=Pool(pool_count)
-#result = pool.map(run,[Nrun1]*pool_count)
-#result = pool.map_async(run,[Nrun1]*pool_count)
-#result = pool.imap(run,[Nrun1]*pool_count)
-#hosts = [Nrun1]*pool_count
-#args = ((host) for host in hosts)
-#pool = Pool(processes=pool_count)
-#pool.map_async(run, args)
-#pool.close()
-#pool.join()
+
 
 def mmap():
 	pool = Pool(pool_count)
