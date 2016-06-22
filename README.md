@@ -20,7 +20,10 @@ This piece of algorithm pops up a proggress bar on to your terminal for multipro
 Here is the recipe for using it in a proper way!
 
 # Recipe
+What you need to do is:
 
+1. Download ```progbar.py ``` and be sure that this file downloaded to the same directory with your ```__main__ ``` code.
+2. Then, import ```progbar.py ``` into your main code.
 
 
 # Acknowlegement
