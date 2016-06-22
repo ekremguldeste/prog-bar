@@ -37,7 +37,8 @@ import inspect, os
 from progbar import *
 ```
 
-4. Then call  ``` stamp_versions() ```  for 
+4. Then call  ``` stamp_versions() ```  for letting you know the versions of Scipy, Numpy, GCC, current file name and directory :
+ 
 ![Alt Tex](https://github.com/ekremguldeste/prog-bar/blob/master/versions.png)
 
 # Acknowlegement
