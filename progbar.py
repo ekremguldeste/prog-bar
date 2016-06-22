@@ -4,7 +4,7 @@ import multiprocessing
 import numpy as np
 import time
 
-
+x_starter_line =10
 
 def stamp_versions():
 	from scipy.version import version
@@ -42,13 +42,13 @@ def progress_bar(pool_count,x_starter_line):
 		#sys.stdout.write('\33[16;0H')
 
 
-def progress_estimator(j,current_xcoord,Nrun1,x_starter_line):
+def progress_estimator(j,current_xcoord,Nrun1):
 	perprogress=int(np.ceil(float(Nrun1)/20))
 	x=j/perprogress
 	if j%perprogress==0 and j<Nrun1:
 		print_there(x_starter_line+current_xcoord,15+x,'>')
 
-def percentage(current_pid, j, current_xcoord, Nrun1,x_starter_line,launch_time,c_launch_time):	
+def percentage(current_pid, j, current_xcoord, Nrun1,launch_time,c_launch_time):	
 	if j==25:
 		print_there(x_starter_line+current_xcoord,47, str(round((float((time.time()-launch_time))*(Nrun1/25)/3600),3))+'  |'+str(c_launch_time))
 		print_there(x_starter_line+current_xcoord,11, str(current_pid))
