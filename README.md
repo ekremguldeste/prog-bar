@@ -38,7 +38,7 @@ from progbar import *
 ```
 
 4. Then call  ``` stamp_versions() ```  for 
-
+![Alt Tex](https://github.com/ekremguldeste/prog-bar/blob/master/versions.png)
 
 # Acknowlegement
 Finally, I would like to thank [Burak Kakillioğlu](https://github.com/bkakilli) for enforcing me to upload this module on GitHub
