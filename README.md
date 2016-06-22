@@ -23,7 +23,21 @@ Here is the recipe for using it in a proper way!
 What you need to do is:
 
 1. Download ```progbar.py ``` and be sure that this file downloaded to the same directory with your ```__main__ ``` code.
-2. Then, import ```progbar.py ``` into your main code.
+2. Import ```time, os, inspect ``` into your main code to let ```progbar``` module stamps the versions of Scipy, Numpy, GCC, current file name and directory and let module estimates the execution time of the code, i.e. 
+
+
+```python
+import time
+import sys
+import inspect, os 
+``` 
+3. Then, import ```progbar.py ``` into your main code. 
+
+```python
+from progbar import *
+```
+
+4. Then call  ``` stamp_versions() ```  for 
 
 
 # Acknowlegement
